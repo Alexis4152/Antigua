@@ -28,7 +28,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns="http://www.springframework.org/schema/beans">
 
 <context:annotation-config/>
-<context:component-scan base-package="mx.antigua.*"/><!-- org -->
+<context:component-scan base-package="org"/>
 
 <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="jspViewResolver">
 
@@ -71,7 +71,7 @@ xmlns="http://www.springframework.org/schema/beans">
 
 		<property value="POLLERIA" name="username" />	
 
-		<property value="alex4152" name="password" />
+		<property value="corazonhtrm5609" name="password" />
 
 	</bean>
 	<!--<bean id="dataSource3" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 

@@ -12,9 +12,12 @@
 <!-- VISTAS DEL APLICATIVO -->
 
 <!-- CIERRA SESIÓN ANTES QUE NADA -->
-<security:intercept-url pattern="/Menu principal" access="ROLE_ADMIN,ROLE_USER"/>
+<security:intercept-url pattern="/Choices" access="ROLE_ADMIN,ROLE_USER"/>
 <!-- CIERRA SESIÓN ANTES QUE NADA -->
 <security:intercept-url pattern="/Memoria" access="ROLE_ADMIN,ROLE_USER"/><!-- MEMORIA DEL SERVIDOR -->
+<security:intercept-url pattern="/Menu" access="ROLE_ADMIN,ROLE_USER"/><!-- VISTA VENTA A CREDITO -->
+<security:intercept-url pattern="/AgregarProductos" access="ROLE_ADMIN,ROLE_USER"/>
+<security:intercept-url pattern="/Calendar" access="ROLE_ADMIN,ROLE_USER"/>
 <!-- CIERRA SESIÓN ANTES QUE NADA -->
 <security:intercept-url pattern="/Aplicativos" access="ROLE_ADMIN,ROLE_USER"/>
 <!-- CIERRA SESIÓN ANTES QUE NADA -->
@@ -41,7 +44,7 @@
 <security:intercept-url pattern="/UpdateIndicadorProceso" access="ROLE_ADMIN,ROLE_USER"/> <!-- PARAMETROS -->
 <security:intercept-url pattern="/UpdateRegionesEjecutar" access="ROLE_ADMIN,ROLE_USER"/> <!-- PARAMETROS -->
 
-<security:intercept-url pattern="/Venta" access="ROLE_ADMIN,ROLE_USER"/>
+
 
 
 <!-- VISTAS/ACCIONES QUE NO DEBEN IR EN ESTE ARCHIV SON:-->
@@ -53,7 +56,7 @@ SE VALIDO QUE ESTANDO O NO EN EL SPRING SECURITY FILE LANZA LA EXCEPCION
 PORQUE NO EXISTE EL USERNAME DEBIDO A QUE LA SESSION EXPIRO
 --> 
 
-   <form-login login-page="/Login" default-target-url="/Menu principal"
+   <form-login login-page="/Login" default-target-url="/Menu"
    authentication-failure-url="/Login?error=true"/> <!-- RUTA POR DEFAULT CUANDO SE ACCEDE CORRECTAMENTE A LA PAGINA SOLICITADA -->
    <security:logout invalidate-session="true" delete-cookies="JSESSIONID" logout-success-url="/Logout" logout-url="/j_spring_security_logout"/><!--EL LOGOUT DEL SISTEMA-->
 </security:http>
